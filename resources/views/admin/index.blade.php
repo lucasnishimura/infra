@@ -280,7 +280,7 @@
                 </div>
                 <div class="info-container">
                     <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">John Doe</div>
-                    <div class="email">john.doe@example.com</div>
+                    <div class="email">john.doe@example.com </div>
                     <div class="btn-group user-helper-dropdown">
                         <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
@@ -304,6 +304,13 @@
                         <a href="index.html">
                             <i class="material-icons">home</i>
                             <span>Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/funcionarios">
+                            <i class="material-icons">face</i>
+                            <span>Funcionários</span>
                         </a>
                     </li>
                     <li>

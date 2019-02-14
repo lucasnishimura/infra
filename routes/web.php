@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('admin.index'); //ao inves de varra coloca ponto
-});
+Route::get('/','home@index');//Route::get ou Route::post
+Route::get('/funcionarios','funcionario@index');
+    
+
