@@ -13,8 +13,9 @@
 
 Route::get('/','home@index');//Route::get ou Route::post
 Route::get('/funcionarios','funcionario@index');
+Route::get('/funcionarios/add','funcionario@create');
+Route::post('/funcionarios/add','funcionario@store');
 Route::get('/funcionarios/{id}','funcionario@show');
 Route::post('/funcionarios/{id}','funcionario@update');
-Route::post('/funcionarios/add','funcionario@create');
     
 

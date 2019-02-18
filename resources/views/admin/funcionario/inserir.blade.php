@@ -35,27 +35,15 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <h2>ALTERAR DADOS FUNCIONÁRIO</h2>
-                            <ul class="header-dropdown m-r--5">
-                                <li class="dropdown">
-                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                        <i class="material-icons">more_vert</i>
-                                    </a>
-                                    <ul class="dropdown-menu pull-right">
-                                        <li><a href="javascript:void(0);">Action</a></li>
-                                        <li><a href="javascript:void(0);">Another action</a></li>
-                                        <li><a href="javascript:void(0);">Something else here</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <h2>CADASTRO DE FUNCIONÁRIO</h2>
                         </div>
                         <div class="body">
-                            <form id="form_validation" action="/funcionarios/{{$func->id}}" method="POST">
+                            <form id="form_validation" action="/funcionarios/add" method="POST">
                                 @csrf
                                 <div class="col-md-12">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="text" value="{{$func->nome}}" class="form-control" autocomplete="off" name="nome" required>
+                                            <input type="text" value="" class="form-control" autocomplete="off" name="nome" required>
                                             <label class="form-label">Nome</label>
                                         </div>
                                     </div>
@@ -64,7 +52,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="text" value="{{$func->endereco}}" class="form-control" autocomplete="off" name="endereco" required>
+                                            <input type="text" value="" class="form-control" autocomplete="off" name="endereco" required>
                                             <label class="form-label">Endereço</label>
                                         </div>
                                     </div>
@@ -73,7 +61,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="email" value="{{$func->email}}" class="form-control" autocomplete="off" name="email" required>
+                                            <input type="email" value="" class="form-control" autocomplete="off" name="email" required>
                                             <label class="form-label">Email</label>
                                         </div>
                                     </div>
@@ -82,7 +70,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="number" value="{{$func->carteira_trabalho}}" class="form-control" name="carteira_trabalho" required>
+                                            <input type="number" value="" class="form-control" name="carteira_trabalho" required>
                                             <label class="form-label">Carteira de Trabalho</label>
                                         </div>
                                         <div class="help-info">Apenas números</div>
@@ -92,7 +80,7 @@
                                 <div class="col-md-2">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="text" value="{{date('d/m/Y',strtotime($func->data_nascimento))}}" class="form-control data" name="data_nascimento" required>
+                                            <input type="text" value="" class="form-control data" name="data_nascimento" required>
                                             <label class="form-label">Data de nascimento</label>
                                         </div>
                                     </div>
@@ -101,7 +89,7 @@
                                 <div class="col-md-5">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="text" value="{{$func->nome_conjuge}}" class="form-control" autocomplete="off" name="nome_conjuge">
+                                            <input type="text" value="" class="form-control" autocomplete="off" name="nome_conjuge">
                                             <label class="form-label">Nome conjuge</label>
                                         </div>
                                     </div>
@@ -110,17 +98,17 @@
                                 <div class="col-md-5">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="number" value="{{$func->quantidade_beneficiarios}}" class="form-control" name="quantidade_beneficiarios">
+                                            <input type="number" value="" class="form-control" name="quantidade_beneficiarios">
                                             <label class="form-label">Número de beneficiários</label>
                                         </div>
                                         <div class="help-info">Apenas números</div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="col-md-3">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="text" value="{{$func->salario}}" class="form-control valor" name="salario">
+                                            <input type="text" value="" class="form-control valor" name="salario">
                                             <label class="form-label">Salário</label>
                                         </div>
                                     </div>
@@ -129,7 +117,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="text" value="{{$func->vt}}" class="form-control valor" name="vt">
+                                            <input type="text" value="" class="form-control valor" name="vt">
                                             <label class="form-label">Vale Transporte</label>
                                         </div>
                                     </div>
@@ -138,25 +126,25 @@
                                 <div class="col-md-3">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="text" value="{{$func->vr}}" class="form-control valor" name="vr">
+                                            <input type="text" value="" class="form-control valor" name="vr">
                                             <label class="form-label">Vale Refeição</label>
                                         </div>
                                     </div>
                                 </div>
-                                 
+                                
                                 <div class="col-md-3">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="text" value="{{$func->va}}" class="form-control valor" name="va">
+                                            <input type="text" value="" class="form-control valor" name="va">
                                             <label class="form-label">Vale Alimentação</label>
                                         </div>
                                     </div>
                                 </div>
-
+                                
                                 <div class="col-md-3">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="text" value="{{$func->data_admissao}}" class="form-control data" name="data_admissao">
+                                            <input type="text" value="" class="form-control data" name="data_admissao">
                                             <label class="form-label">Data de admissão</label>
                                         </div>
                                     </div>
@@ -198,6 +186,7 @@
     <script src="/plugins/node-waves/waves.js"></script>
 
     <script src="/plugins/mask/src/jquery.mask.js"></script>
+    <script src="/plugins/maskmoney/src/jquery.maskMoney.js"></script>
 
     <!-- Custom Js -->
     <script src="/js/admin.js"></script>
@@ -210,6 +199,8 @@
     <script>
         $(document).ready(function(){
             $('.data').mask('00/00/0000');
+
+            $(".valor").maskMoney({prefix:'R$ ', allowNegative: true, thousands:'', decimal:'.', affixesStay: false});
         })
     </script>
 </body>

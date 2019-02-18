@@ -24,11 +24,10 @@ class CreatefuncionariosTable extends Migration
                 $table->string('nome_conjuge');
                 $table->integer('quantidade_beneficiarios');
                 $table->date('data_admissao');
-                $table->float('salario',8,2);
-                $table->float('VT',8,2);
-                $table->float('VR',8,2);
-                $table->float('VA',8,2);
-                $table->string('password');
+                $table->decimal('salario',10,2);
+                $table->decimal('VT',10,2);
+                $table->decimal('VR',10,2);
+                $table->decimal('VA',10,2);
                 $table->timestamps();
             });
         }

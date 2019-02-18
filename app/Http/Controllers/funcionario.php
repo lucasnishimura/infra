@@ -28,7 +28,7 @@ class funcionario extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.funcionario.inserir');
     }
 
     /**
@@ -39,7 +39,16 @@ class funcionario extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dados_form = $_POST;
+        
+        $dados_form['data_nascimento'] = date('Y-d-m',strtotime($dados_form['data_nascimento']));
+        $dados_form['data_admissao'] = date('Y-d-m',strtotime($dados_form['data_admissao']));
+
+        unset($dados_form['_token']);
+        // dd($dados_form);        
+        DB::table('funcionarios')->insert($dados_form);
+
+        return redirect('funcionarios');
     }
 
     /**
