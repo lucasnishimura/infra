@@ -13,5 +13,6 @@
 
 Route::get('/','home@index');//Route::get ou Route::post
 Route::get('/funcionarios','funcionario@index');
+Route::get('/funcionarios/{id}','funcionario@show');
     
 

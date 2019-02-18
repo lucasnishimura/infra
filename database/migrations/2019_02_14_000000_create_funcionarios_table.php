@@ -16,11 +16,19 @@ class CreatefuncionariosTable extends Migration
         if(!Schema::hasTable('funcionarios')){
             Schema::create('funcionarios', function (Blueprint $table) {
                 $table->increments('id');
-                $table->string('name');
-                $table->string('email')->unique();
-                $table->timestamp('email_verified_at')->nullable();
+                $table->string('nome');
+                $table->string('endereco');
+                $table->string('email');
+                $table->integer('carteira_trabalho');
+                $table->date('data_nascimento');
+                $table->string('nome_conjuge');
+                $table->integer('quantidade_beneficiarios');
+                $table->date('data_admissao');
+                $table->float('salario',8,2);
+                $table->float('VT',8,2);
+                $table->float('VR',8,2);
+                $table->float('VA',8,2);
                 $table->string('password');
-                $table->rememberToken();
                 $table->timestamps();
             });
         }
@@ -33,6 +41,6 @@ class CreatefuncionariosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('funcionarios');
     }
 }

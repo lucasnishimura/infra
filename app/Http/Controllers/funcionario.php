@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class funcionario extends Controller
 {
@@ -13,7 +14,11 @@ class funcionario extends Controller
      */
     public function index()
     {
-        return view('admin.funcionario.listar'); //ao inves de varra coloca ponto
+        // $users = DB::select('select * from funcionarios where id > ?', [0]);
+        // $users = DB::table('funcionarios')->get();
+        $func = DB::table('funcionarios')->where('id','>',0)->get();
+        dd($func[0]->data_nascimento);
+        return view('admin.funcionario.listar',['funcionarios'=>$func]); //ao inves de varra coloca ponto
     }
 
     /**

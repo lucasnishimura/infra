@@ -17,7 +17,7 @@ class CreateClientesTable extends Migration
             Schema::create('clientes', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('name');
-                $table->string('email')->unique();
+                $table->string('email');
                 $table->timestamp('email_verified_at')->nullable();
                 $table->string('password');
                 $table->rememberToken();
@@ -33,6 +33,6 @@ class CreateClientesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('clientes');
     }
 }
