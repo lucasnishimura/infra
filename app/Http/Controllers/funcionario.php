@@ -17,7 +17,7 @@ class funcionario extends Controller
         // $users = DB::select('select * from funcionarios where id > ?', [0]);
         // $users = DB::table('funcionarios')->get();
         $func = DB::table('funcionarios')->where('id','>',0)->get();
-        dd($func[0]->data_nascimento);
+
         return view('admin.funcionario.listar',['funcionarios'=>$func]); //ao inves de varra coloca ponto
     }
 
@@ -50,7 +50,9 @@ class funcionario extends Controller
      */
     public function show($id)
     {
-        //
+        $func = DB::table('funcionarios')->where('id',$id)->first();
+        
+        return view('admin.funcionario.ver',['func'=>$func]);
     }
 
     /**
@@ -73,7 +75,17 @@ class funcionario extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $dados_form = $_POST;
+
+        $dados_form['data_nascimento'] = date('Y-d-m',strtotime($dados_form['data_nascimento']));
+
+        unset($dados_form['_token']);
+
+        DB::table('funcionarios')
+            ->where('id', $id)
+            ->update($dados_form);
+
+        return redirect('funcionarios');
     }
 
     /**

@@ -15,7 +15,7 @@
     <!-- Search Bar -->
     <div class="search-bar">
         <div class="search-icon">
-            <i class="material-icons">search</i>
+            <i class="material-icons">Procurar</i>
         </div>
         <input type="text" placeholder="START TYPING...">
         <div class="close-search">
@@ -30,19 +30,13 @@
 
     <section class="content">
         <div class="container-fluid">
-            <div class="block-header">
-                <h2>
-                    JQUERY DATATABLES
-                    <small>Taken from <a href="https://datatables.net/" target="_blank">datatables.net</a></small>
-                </h2>
-            </div>
             <!-- Basic Examples -->
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
                             <h2>
-                                BASIC EXAMPLE
+                                Listagem de Funcionários
                             </h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
@@ -50,7 +44,7 @@
                                         <i class="material-icons">more_vert</i>
                                     </a>
                                     <ul class="dropdown-menu pull-right">
-                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="funcionarios/add">Adicionar</a></li>
                                         <li><a href="javascript:void(0);">Another action</a></li>
                                         <li><a href="javascript:void(0);">Something else here</a></li>
                                     </ul>
@@ -83,9 +77,9 @@
                                         <tr>
                                             <td>{{$func->nome}}</td>
                                             <td>{{$func->email}}</td>
-                                            <td>{{$func->data_nascimento}}</td>
+                                            <td>{{date('d/m/Y',strtotime($func->data_nascimento))}}</td>
                                             <td>R$ {{$func->salario}}</td>
-                                            <td><button class="btn btn-primary" href="/funcionarios/{{$func->id}}">Ver</button></td>
+                                            <td><a class="btn btn-primary" href="/funcionarios/{{$func->id}}">Ver</a></td>
                                         </tr>
                                     @endforeach
                                     </tbody>
