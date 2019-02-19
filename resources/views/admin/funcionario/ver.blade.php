@@ -129,7 +129,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="text" value="{{$func->vt}}" class="form-control valor" name="vt">
+                                            <input type="text" value="{{$func->VT}}" class="form-control valor" name="vt">
                                             <label class="form-label">Vale Transporte</label>
                                         </div>
                                     </div>
@@ -138,7 +138,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="text" value="{{$func->vr}}" class="form-control valor" name="vr">
+                                            <input type="text" value="{{$func->VR}}" class="form-control valor" name="vr">
                                             <label class="form-label">Vale Refeição</label>
                                         </div>
                                     </div>
@@ -147,7 +147,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="text" value="{{$func->va}}" class="form-control valor" name="va">
+                                            <input type="text" value="{{$func->VA}}" class="form-control valor" name="va">
                                             <label class="form-label">Vale Alimentação</label>
                                         </div>
                                     </div>
@@ -156,7 +156,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="text" value="{{$func->data_admissao}}" class="form-control data" name="data_admissao">
+                                            <input type="text" value="{{date('d/m/Y',strtotime($func->data_admissao))}}" class="form-control data" name="data_admissao">
                                             <label class="form-label">Data de admissão</label>
                                         </div>
                                     </div>

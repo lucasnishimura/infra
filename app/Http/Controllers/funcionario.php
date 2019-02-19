@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use DateTime;
 
 class funcionario extends Controller
 {
@@ -41,11 +42,11 @@ class funcionario extends Controller
     {
         $dados_form = $_POST;
         
-        $dados_form['data_nascimento'] = date('Y-d-m',strtotime($dados_form['data_nascimento']));
-        $dados_form['data_admissao'] = date('Y-d-m',strtotime($dados_form['data_admissao']));
+        $dados_form['data_nascimento'] = $this->format_date($dados_form['data_nascimento']);
+        $dados_form['data_admissao'] = $this->format_date($dados_form['data_admissao']);
 
         unset($dados_form['_token']);
-        // dd($dados_form);        
+        
         DB::table('funcionarios')->insert($dados_form);
 
         return redirect('funcionarios');
@@ -86,7 +87,8 @@ class funcionario extends Controller
     {
         $dados_form = $_POST;
 
-        $dados_form['data_nascimento'] = date('Y-d-m',strtotime($dados_form['data_nascimento']));
+        $dados_form['data_nascimento'] = $this->format_date($dados_form['data_nascimento']);
+        $dados_form['data_admissao'] = $this->format_date($dados_form['data_admissao']);
 
         unset($dados_form['_token']);
 
@@ -106,5 +108,20 @@ class funcionario extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    /**
+     * format date in DB standard.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function format_date($data)
+    {
+        $data = explode('/',$data);
+        $data = array_reverse($data);
+        $data = implode('-',$data);
+        $date = new DateTime($data);
+        return $date->format('Y-m-d');
     }
 }
