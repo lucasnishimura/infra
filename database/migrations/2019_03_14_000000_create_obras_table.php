@@ -16,7 +16,11 @@ class CreateObrasTable extends Migration
         if(!Schema::hasTable('obras')){
             Schema::create('obras', function (Blueprint $table) {
                 $table->increments('id');
-                $table->string('endereco');
+                $table->string('logradouro');
+                $table->string('complemento');
+                $table->string('bairro');
+                $table->string('cidade');
+                $table->string('estado');
                 $table->integer('cep');
                 $table->string('latitudde');
                 $table->string('longitude');

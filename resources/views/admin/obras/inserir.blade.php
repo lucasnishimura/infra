@@ -49,11 +49,20 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-12">
+                                <div class="col-md-6">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="text" value="" class="form-control" autocomplete="off" name="endereco" required>
-                                            <label class="form-label">Endereço</label>
+                                            <input type="text" value="" class="form-control" autocomplete="off" name="nome" required>
+                                            <label class="form-label">Nome</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="email" value="" class="form-control" autocomplete="off" name="email" required>
+                                            <label class="form-label">Email</label>
                                         </div>
                                     </div>
                                 </div>
@@ -61,95 +70,98 @@
                                 <div class="col-md-6">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="email" value="" class="form-control" id="cep" autocomplete="off" name="cep" required>
+                                            <input type="text" value="" class="form-control valor" name="valor">
+                                            <label class="form-label">Valor da obra</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" value="" class="form-control valor" name="telefone">
+                                            <label class="form-label">Telefone</label>
+                                        </div>
+                                    </div>
+                                </div>  
+
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="email" value="" class="form-control data" autocomplete="off" name="data_inicio" required>
+                                            <label class="form-label">Data de início da obra</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="email" value="" class="form-control data" autocomplete="off" name="data_revisao" required>
+                                            <label class="form-label">Data de revisão da obra</label>
+                                        </div>
+                                    </div>
+                                </div>   
+
+                                <div class="col-md-4">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="number" value="" class="form-control" id="cep" autocomplete="off" name="cep" required>
                                             <label class="form-label">CEP</label>
                                         </div>
                                     </div>
                                 </div>
 
+                                <div class="col-md-12">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" value="" class="form-control" autocomplete="off" name="logradouro" required>
+                                            <label class="form-label">Endereço</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" value="" class="form-control" autocomplete="off" name="complemento" required>
+                                            <label class="form-label">Complemento</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" value="" class="form-control" autocomplete="off" name="bairro" required>
+                                            <label class="form-label">Bairro</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <p>
+                                        <b>Basic</b>
+                                    </p>
+                                    <select class="form-control show-tick">
+                                        <option>Mustard</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </select>
+                                </div>
+                                
                                 <div class="col-md-6">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="number" value="" class="form-control" name="carteira_trabalho" required>
-                                            <label class="form-label">Carteira de Trabalho</label>
-                                        </div>
-                                        <div class="help-info">Apenas n�meros</div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-2">
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <input type="text" value="" class="form-control data" name="data_nascimento" required>
-                                            <label class="form-label">Data de nascimento</label>
+                                            <input type="text" value="" class="form-control" autocomplete="off" name="cidade" required>
+                                            <label class="form-label">Cidade</label>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="col-md-5">
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <input type="text" value="" class="form-control" autocomplete="off" name="nome_conjuge">
-                                            <label class="form-label">Nome conjuge</label>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="col-md-5">
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <input type="number" value="" class="form-control" name="quantidade_beneficiarios">
-                                            <label class="form-label">N�mero de benefici�rios</label>
-                                        </div>
-                                        <div class="help-info">Apenas n�meros</div>
-                                    </div>
-                                </div>
+                                
 
-                                <div class="col-md-3">
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <input type="text" value="" class="form-control valor" name="salario">
-                                            <label class="form-label">Sal�rio</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="col-md-3">
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <input type="text" value="" class="form-control valor" name="vt">
-                                            <label class="form-label">Vale Transporte</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="col-md-3">
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <input type="text" value="" class="form-control valor" name="vr">
-                                            <label class="form-label">Vale Refei��o</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="col-md-3">
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <input type="text" value="" class="form-control valor" name="va">
-                                            <label class="form-label">Vale Alimenta��o</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="col-md-3">
-                                    <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <input type="text" value="" class="form-control data" name="data_admissao">
-                                            <label class="form-label">Data de admiss�o</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                
                                 <button class="btn btn-primary waves-effect" type="submit">Salvar</button>
                             </form>
                         </div>
@@ -205,9 +217,8 @@
 
         $(document).on('blur','#cep',function(){
             $.ajax({
-                url: 'http://correiosapi.apphb.com/cep/06414025',
-                dataType: 'json',
-                crossDomain: true,
+                url: 'https://viacep.com.br/ws/06414025/json/',
+                dataType: 'json',   
                 contentType: "application/json",
                 statusCode: {
                     200: function(data) { console.log(data); } // Ok
