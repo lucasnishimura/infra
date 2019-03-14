@@ -8,6 +8,11 @@ use DateTime;
 
 class funcionario extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -65,16 +70,6 @@ class funcionario extends Controller
         return view('admin.funcionario.ver',['func'=>$func]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.

@@ -10,7 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/','home@index');//Route::get ou Route::post
 Route::get('/funcionarios','funcionario@index');
 Route::get('/funcionarios/add','funcionario@create');
@@ -19,3 +18,7 @@ Route::get('/funcionarios/{id}','funcionario@show');
 Route::post('/funcionarios/{id}','funcionario@update');
     
 
+
+Auth::routes();
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::get('/home', 'HomeController@index')->name('home');
