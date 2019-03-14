@@ -41,6 +41,14 @@
                             <span>Funcionários</span>
                         </a>
                     </li>
+                   
+                    <li>
+                        <a href="/obras">
+                            <i class="material-icons">build</i>
+                            <span>Obras</span>
+                        </a>
+                    </li>
+                   
                     <li>
                         <a href="pages/typography.html">
                             <i class="material-icons">text_fields</i>
